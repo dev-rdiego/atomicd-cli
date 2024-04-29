@@ -1,3 +1,7 @@
+import chalk from "chalk";
+import inquirer from "inquirer";
+import { setInternalConfig } from "./index.js";
+
 export default async function setConfigs() {
     try {
         const answers = await inquirer.prompt([
@@ -27,8 +31,14 @@ export default async function setConfigs() {
             },
         ]);
 
-        // TODO: Save the configuration to a file and create the directories
-        console.log(chalk.green('\nConfiguration saved successfully! 🚀'));
+        setInternalConfig('useTypescript', answers.useTypescript);
+        setInternalConfig('atomsPath', answers.defaultComponentPath + '/atoms');
+        setInternalConfig('moleculesPath', answers.defaultComponentPath + '/molecules');
+        setInternalConfig('organismsPath', answers.defaultComponentPath + '/organisms');
+        setInternalConfig('templatesPath', answers.defaultTemplatePath);
+        setInternalConfig('pagesPath', answers.defaultPagePath);
+
+        console.log(chalk.greenBright('\nConfiguration saved successfully! 🚀'));
     } catch (error) {
         console.error('Error occurred during prompt:', error);
     }

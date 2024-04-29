@@ -2,10 +2,11 @@ import Configstore from 'configstore';
 
 const config = new Configstore('atomd-cli');
 
-const setConfig = (key, value) => config.set(key, value);
-const getConfigValue = (key) => config.get(key);
-const getAllConfig = () => config.all;
-const deleteConfig = (key) => config.delete(key);
+const setInternalConfig = (key, value) => config.set(key, value);
+const getInternalConfigValue = (key) => config.get(key);
+const getAllInternalConfig = () => config.all;
+const deleteInternalConfig = (key) => config.delete(key);
+const deleteAllInternalConfig = () => config.clear();
 
-export { setConfig, getConfigValue, getAllConfig, deleteConfig };
+export { setInternalConfig, getInternalConfigValue, getAllInternalConfig, deleteInternalConfig, deleteAllInternalConfig };
 

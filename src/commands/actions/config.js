@@ -76,6 +76,8 @@ function viewConfig() {
 
     console.log(chalk.magentaBright('\nCurrent Configuration:'));
     console.log(chalk.blueBright(`\n- Use Typescript: ${config.useTypescript ? chalk.greenBright('Yes ✅') : chalk.redBright('No ❌')}`));
+    console.log(chalk.blueBright(`- Create CSS Files: ${config.createCssFiles ? chalk.greenBright('Yes ✅') : chalk.redBright('No ❌')}`));
+    console.log(chalk.blueBright(`- Component Content Type: ${chalk.whiteBright(chalk.bold(config.componentContentType))}`));
     console.log(chalk.blueBright(`- Components Path: ${chalk.whiteBright(chalk.bold(config.componentsPath))}`));
     console.log(chalk.blueBright(`- Templates Path: ${chalk.whiteBright(chalk.bold(config.templatesPath))}`));
     console.log(chalk.blueBright(`- Pages Path: ${chalk.whiteBright(chalk.bold(config.pagesPath))}`));

@@ -75,10 +75,8 @@ function viewConfig() {
     const config = getAllInternalConfig();
 
     console.log(chalk.magentaBright('\nCurrent Configuration:'));
-    console.log(chalk.blueBright(`\n- Use Typescript: ${chalk.whiteBright(chalk.bold(config.useTypescript))}`));
-    console.log(chalk.blueBright(`- Atoms Path: ${chalk.whiteBright(chalk.bold(config.atomsPath))}`));
-    console.log(chalk.blueBright(`- Molecules Path: ${chalk.whiteBright(chalk.bold(config.moleculesPath))}`));
-    console.log(chalk.blueBright(`- Organisms Path: ${chalk.whiteBright(chalk.bold(config.organismsPath))}`));
+    console.log(chalk.blueBright(`\n- Use Typescript: ${config.useTypescript ? chalk.greenBright('Yes ✅') : chalk.redBright('No ❌')}`));
+    console.log(chalk.blueBright(`- Components Path: ${chalk.whiteBright(chalk.bold(config.componentsPath))}`));
     console.log(chalk.blueBright(`- Templates Path: ${chalk.whiteBright(chalk.bold(config.templatesPath))}`));
     console.log(chalk.blueBright(`- Pages Path: ${chalk.whiteBright(chalk.bold(config.pagesPath))}`));
 }

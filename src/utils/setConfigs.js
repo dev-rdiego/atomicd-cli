@@ -8,7 +8,7 @@ export default async function setConfigs() {
             {
                 type: 'confirm',
                 name: 'useTypescript',
-                message: 'Do you want to use TSX files?',
+                message: 'Do you want to use Typescript?',
                 default: true,
             },
             {
@@ -32,6 +32,7 @@ export default async function setConfigs() {
         ]);
 
         setInternalConfig('useTypescript', answers.useTypescript);
+        setInternalConfig('componentsPath', answers.defaultComponentPath);
         setInternalConfig('atomsPath', answers.defaultComponentPath + '/atoms');
         setInternalConfig('moleculesPath', answers.defaultComponentPath + '/molecules');
         setInternalConfig('organismsPath', answers.defaultComponentPath + '/organisms');

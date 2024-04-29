@@ -3,6 +3,7 @@
 import { Command } from "commander";
 import addCreateCommand from "../src/commands/create.js";
 import addInitCommand from "../src/commands/init.js";
+import addConfigCommand from "../src/commands/config.js";
 
 const program = new Command();
 
@@ -17,4 +18,8 @@ addCreateCommand(program);
 // Init command
 addInitCommand(program);
 
+// Config command
+addConfigCommand(program);
+
+// Parse the arguments
 program.parse(process.argv);

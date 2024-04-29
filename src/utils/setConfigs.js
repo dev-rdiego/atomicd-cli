@@ -51,6 +51,12 @@ export default async function setConfigs() {
                 message: 'Enter the pages path',
                 default: 'src/lib/views/pages',
             },
+            {
+                type: 'confirm',
+                name: 'createDirectories',
+                message: 'Do you want to create the directories now?',
+                default: true,
+            }
         ]);
 
         setInternalConfig('useTypescript', answers.useTypescript);
@@ -62,6 +68,26 @@ export default async function setConfigs() {
         setInternalConfig('organismsPath', answers.defaultComponentPath + '/organisms');
         setInternalConfig('templatesPath', answers.defaultTemplatePath);
         setInternalConfig('pagesPath', answers.defaultPagePath);
+
+        if (answers.createDirectories) {
+            const directories = [
+                answers.defaultComponentPath,
+                answers.defaultTemplatePath,
+                answers.defaultPagePath,
+                answers.defaultComponentPath + '/atoms',
+                answers.defaultComponentPath + '/molecules',
+                answers.defaultComponentPath + '/organisms'
+            ];
+
+            directories.forEach(async (dir) => {
+                try {
+                    await fs.ensureDir(dir);
+                    console.log(chalk.greenBright(`Directory ${dir} created successfully! 🚀`));
+                } catch (error) {
+                    console.error(chalk.redBright(`Error creating directory ${dir}: ${error}`));
+                }
+            });
+        }
 
         console.log(chalk.greenBright('\nConfiguration saved successfully! 🚀'));
     } catch (error) {

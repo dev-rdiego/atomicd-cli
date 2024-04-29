@@ -28,7 +28,7 @@ export default async function setConfigs() {
                     'Functional Components Exported',
                     'Arrow Functions Components',
                     'Arrow Functions Components Exported'],
-                default: 'Arrow Functions Components Exported',
+                default: 'Functional Components',
                 transformer: function (value) {
                     return value.toLowerCase().replace(/ /g, '-');
                 }

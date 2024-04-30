@@ -1,5 +1,6 @@
 import chalk from "chalk";
 import inquirer from "inquirer";
+import fs from "fs-extra";
 import { setInternalConfig } from "./index.js";
 
 export default async function setConfigs() {

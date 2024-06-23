@@ -1,6 +1,6 @@
 {
   "name": "atomicd-cli",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A CLI to create files and dirs following the Atomic Desing coding pattern",
   "main": "index.js",
   "type": "module",

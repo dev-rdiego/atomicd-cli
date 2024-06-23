@@ -38,19 +38,19 @@ export default async function setConfigs() {
                 type: 'input',
                 name: 'defaultComponentPath',
                 message: 'Enter the components path',
-                default: 'src/lib/components',
+                default: 'src/components',
             },
             {
                 type: 'input',
                 name: 'defaultTemplatePath',
                 message: 'Enter the layouts path',
-                default: 'src/lib/views/layouts',
+                default: 'src/views/layouts',
             },
             {
                 type: 'input',
                 name: 'defaultPagePath',
                 message: 'Enter the pages path',
-                default: 'src/lib/views/pages',
+                default: 'src/views/pages',
             },
             {
                 type: 'confirm',

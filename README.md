@@ -17,19 +17,19 @@ npm install -g atomicd-cli
 Use the init command to initialize the CLI configuration:
 
 ```bash
-atomicd init
+atomd init
 ```
 
 This command will guide you through setting up the initial configuration for the Atomic Design CLI.
 
-> **IMPORTANT**: *Ensure you have a valid configuration before using the create or config commands. Use atomicd init to set up the configuration if it does not exist*.
+> **IMPORTANT**: *Ensure you have a valid configuration before using the create or config commands. Use atomd init to set up the configuration if it does not exist*.
 
 ### CLI Configuration
 
 Use the `config` command to interact with the CLI configuration:
 
 ```bash
-atomicd config [options]
+atomd config [options]
 Options:
 
 -o, --overwrite: Overwrite the current configuration.
@@ -42,7 +42,7 @@ Options:
 Use the `create` command to create a new component with various options:
 
 ```bash
-atomicd create <component> [options]
+atomd create <component> [options]
 
 Arguments:
 

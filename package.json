@@ -1,11 +1,11 @@
 {
   "name": "atomicd-cli",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A CLI to create files and dirs following the Atomic Desing coding pattern",
   "main": "index.js",
   "type": "module",
   "bin": {
-    "atomicd": "bin/global.js"
+    "atomd": "bin/global.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

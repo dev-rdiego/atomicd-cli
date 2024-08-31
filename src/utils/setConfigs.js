@@ -16,7 +16,7 @@ export default async function setConfigs() {
                 type: 'confirm',
                 name: 'createCssFiles',
                 message: 'Do you want to create CSS files?',
-                default: true,
+                default: false,
             },
             {
                 type: 'list',
